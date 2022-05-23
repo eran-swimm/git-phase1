@@ -9,16 +9,40 @@ cd git-lab
 git init # this will initialize an empty repo
 ```
 
-# Add some files
+# Create two text files
 
-We are going to create new python files. The first file will implement function 
-to return the longest string between two
+We are going to two new text files. One file will contains names of countries and one file names of monthes.
 
-create empty file `functions.py` and paste the below code there
+* Create an empty file `countries.txt` and paste the following content into it
 
-```python
-def get_longest(s1, s2):
-    if len(s1) > len(s2):
-      return s1
-    return s2
 ```
+Israel
+England
+United Kingdom
+```
+
+* Create an empty file `months.txt` and paste the following content into it (with the typos)
+
+```
+January
+Feburary
+March
+May
+April
+June
+July
+Aogust
+Saptember
+October
+November
+December
+```
+
+# Add and commit
+Now we want to add the files to the repo. For this, we are going to run `git add` and then `git commit`
+
+```shell
+git add countries.txt months.txt
+git commit -m 'initial files'
+```
+
