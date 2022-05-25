@@ -1,48 +1,32 @@
-# Initialize the repo
+# Git Workshop - Basics
 
-We create an empty folder, and initialize an empty repo
-You can create a repo from an existing folder, or clone other person repo
-but later on this
-```
-mkdir git-lab
-cd git-lab
-git init # this will initialize an empty repo
-```
+In this step, we will play with the basic git commands. We will start with an empty repository,
+add files, stage and commit them.
 
-# Create two text files
+Good luck
 
-We are going to two new text files. One file will contains names of countries and one file names of monthes.
+## Create empty repp
 
-* Create an empty file `countries.txt` and paste the following content into it
+We will start with empty folder
 
-```
-Israel
-England
-United Kingdom
+* Create a new folder, cd to this folder 
+
+```bash
+mkdir my-project
+cd my-project
+ls  # verify empty folder
 ```
 
-* Create an empty file `months.txt` and paste the following content into it (with the typos)
+* Initialize the repo
+
+To initialize the repo, we use the command git init. It will create a `.git` folder under the current folder. 
+This folder used to hold all the data about the repository: commits, commits tree, current commit and more.
 
 ```
-January
-Feburary
-March
-May
-April
-June
-July
-Aogust
-Saptember
-October
-November
-December
+git init
+ls -a. # use -a to show hidden files and verify you have .git folder
 ```
 
-# Add and commit
-Now we want to add the files to the repo. For this, we are going to run `git add` and then `git commit`
+## Create the first commit
 
-```shell
-git add countries.txt months.txt
-git commit -m 'initial files'
-```
-
+Since the repository is empty, to create an empty repo
