@@ -160,6 +160,57 @@ git commit
 
 <img width="856" alt="image" src="https://user-images.githubusercontent.com/100768144/170858758-2a0243c5-5efe-429f-b2a5-492a5542f116.png">
 
+# Create the third commit
+
+We already created two commits. Now let's create the third one (again use **>>** and not >). 
+
+```bash
+echo "Falafel" >> foods.txt
+echo "Israel" >> countries.txt
+```
+
+So we modified the two files, you can use `git diff` to see the actual changes and `git status` to see that they were not staged yet. 
+
+<img width="769" alt="image" src="https://user-images.githubusercontent.com/100768144/170859321-b29dbdba-2a96-427d-8d9a-4803771b7229.png">
+
+Now we need to stage the changes and commit them.
+
+Since the pattern of editing -> staging -> committing is common, Git gives us a way to skip the git add and do both the staging and committing in single command.
+
+So instead of running
+```
+git add countries.txt foods.txt
+git commit -m "updated countries and foods"
+```
+
+We can run the following
+```
+git commit -am  "updated countries and foods"
+```
+
+This will work if you edit files, not if you add new ones.
+Run either of the commands.
+
+# History
+
+Now we have 3 commits, we can now look at the history. The command to show us the history is `git log`. 
+
+```bash
+git log
+```
+<img width="674" alt="image" src="https://user-images.githubusercontent.com/100768144/170859483-82699b30-96a4-4a76-81c7-f56e4b5aad86.png">
+
+What we see here?
+You should see 3 entries, new to old (e.g your first changes are at the bottom). For each change, you see the commit id (40 chars), the author, the date and comment you entered.
+
+If you want a less verbose format, you can run `git log --oneline`, this gives you the output in one line for each commit, and also short the commit id.
+
+There are many ways to customize `git log`. Like all Git commands, you can run `git log --help` to get help or search google 😄. 
+
+
+
+
+
 
 
 
