@@ -207,6 +207,53 @@ If you want a less verbose format, you can run `git log --oneline`, this gives y
 
 There are many ways to customize `git log`. Like all Git commands, you can run `git log --help` to get help or search google 😄. 
 
+# Git diff
+
+We already show that we can use `git diff` to see the changes you did and not staged (added) yet. You can also use `git diff` to show diffs for specific file between commits.
+
+Let's run `git log --oneline`
+
+<img width="567" alt="image" src="https://user-images.githubusercontent.com/100768144/170859916-3ef69726-e63c-4e11-9295-f347885a36b9.png">
+
+So I have 3 commits in my history, from new to old they are: `ced8115` `cfd4ea1` `9b746af` (**If you have different commit ids, you should replace mine with yours)
+
+If I want to see the diff in `countries.txt` between the first commit (the oldest) and the second commit, I can run the following:
+
+```
+git diff 9b746af cfd4ea1 -- countries.txt
+```
+I'll get the following output
+
+<img width="619" alt="image" src="https://user-images.githubusercontent.com/100768144/170860016-7ef23628-b033-45e7-ac53-bbbfb9bbe299.png">
+
+Which is what I did in the second commit for this file (we added Italy and UK).
+
+* If you omit the path (e.g. countries.txt) you will get the diffs for all the files
+
+## Get the recent diff
+
+Many times you want to see the diffs in your recent commit. With the above output of log, I can run 
+
+```bash
+git diff ced8115 cfd4ea1
+```
+
+However, Git used a special pointer for the recent commit called HEAD. It also let you use HEAD^ to mark the one version before the HEAD, so to see
+the diff from the last commit, you can run
+```bash
+git diff HEAD^ HEAD
+```
+Moreover, you can omit the last HEAD since this is the default when comparing commits. So you can just run
+```
+git diff HEAD^
+```
+
+Again, git diff has many options, you can read here https://git-scm.com/docs/git-diff or run `git diff --help` or google.
+
+
+
+
+
 
 
 
