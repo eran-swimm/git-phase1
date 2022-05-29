@@ -248,9 +248,11 @@ Moreover, you can omit the last HEAD since this is the default when comparing co
 git diff HEAD^
 ```
 
+<img width="525" alt="image" src="https://user-images.githubusercontent.com/100768144/170861105-73b4424c-48d0-4929-ab15-2c42979c031c.png">
+
+
 Again, git diff has many options, you can read here https://git-scm.com/docs/git-diff or run `git diff --help` or google.
 
-<img width="598" alt="image" src="https://user-images.githubusercontent.com/100768144/170860419-a35ce91b-0fdb-4b13-9790-0caf549fe4f0.png">
 
 
 
