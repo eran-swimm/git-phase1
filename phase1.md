@@ -1,11 +1,49 @@
-# Git Workshop - Basics
+Git Workshop - Basics
+======================
+
 
 In this step, we will play with the basic git commands. We will start with an empty repository,
 add files, stage and commit them.
 
 Good luck
 
-## Create empty repp
+Before starting, there are some preparations had to be done. If this is not the first time you use git, just verify you don't miss anything
+
+# Setup
+
+## Install git
+install git and verify that you can work with git using the command line.
+Try to run `git --version` for example
+
+<img width="396" alt="image" src="https://user-images.githubusercontent.com/100768144/170858869-348b116b-a3c3-4fc4-97f1-3bea8caf6709.png">
+
+## Configure Email/Name
+It is good practice to config your user name and email for git. It is more important when working in collaboration (using GitHub for example), but it is good to define this as you start.
+
+To configure your user name and email, run the following command (just change the values before 😄)
+
+If you think you already configured these values, you can first check
+```bash
+git config --get user.name
+git config --get user.email
+```
+And then, you can set
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+## Configure Editor
+
+Git sometimes uses the editor to prompt you for questions and editing. For this it used the default editor defined in your environemnt or fallbacks to `vi`.
+You can set the default editor explcitly using the `core.editor` key, e.g.,
+
+```
+git config --global core.editor nano
+```
+
+# Create empty repp
 
 We will start with empty folder
 
@@ -27,7 +65,7 @@ git init
 ls -a # use -a to show hidden files and verify you have .git folder
 ```
 
-## Create the first commit
+# Create the first commit
 
 We first create new file. 
 ```
@@ -61,7 +99,7 @@ If we run git status again, we see that there is nothing to commit.
 
 **Congrats! You just created your first commit**
 
-## Create more commits
+# Create more commits
 
 Let's continue the work. Let's add another two countries to the `countries.txt` file.
 
