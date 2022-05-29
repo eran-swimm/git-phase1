@@ -61,4 +61,69 @@ If we run git status again, we see that there is nothing to commit.
 
 **Congrats! You just created your first commit**
 
+## Create more commits
+
+Let's continue the work. Let's add another two countries to the `countries.txt` file.
+
+**Use >> in the commands below**
+
+```bash
+echo "Italy" >> countries.txt
+echo "UK" >> countries.txt
+```
+
+Now if we run `git status` we get the following output
+
+<img width="730" alt="image" src="https://user-images.githubusercontent.com/100768144/170858314-71847d36-5c8d-4bc2-8659-412d56be23ee.png">
+
+We did a change if file, but we did not stage this change yet. So `git status` tells us that there are changes that are not staged yet.
+If we want to stage these changes, we need to run `git add` and then we can commit.
+
+But **before** staging and committing, let's use the `git diff` command. Let's run `git diff` with no arguments and see the output
+
+```bash
+git diff
+```
+<img width="501" alt="image" src="https://user-images.githubusercontent.com/100768144/170858415-e2983734-1f0f-4e30-a60e-bc652494fc90.png">
+
+Let's understand what we see. When running `git diff` with no arguments, it show us the diff between the working tree (e.g. your folder) and the staged changes. 
+That is, it shows you the changes you did which are not **staged**.
+
+In this case, we see that we added two lines with Italy and UK - as expected.
+
+Let's stage the change. Remember - to stage the changes, you need to run `git add`
+
+```bash
+git add countries.txt
+```
+Not the changes are staged. If you run `git diff` now (with no arguments) you will get empty output.
+
+Let's now add new file. Let's call it `foods.txt` and create it with single food Pizza
+
+```bash
+echo Pizza > foods.txt
+```
+
+So what is our status now. We have one change that is staged (in `countries.txt`), and one new file that was created, but not added (staged) yet. 
+This is exactly what `git status` will tell us.
+```bash
+git status
+```
+<img width="744" alt="image" src="https://user-images.githubusercontent.com/100768144/170858679-7ae95269-11c1-4a31-9e3c-764ab49391e6.png">
+
+
+Now let's add the `foods.txt` and create out second! commit. We will not commit without the -m parameter, and we will be prompted to insert comment.
+
+```bash
+git add foods.txt
+git commit
+```
+**Enter a comment when prompted and finalize the commit. Note the commit prompt will be done using your configured editor**
+
+<img width="856" alt="image" src="https://user-images.githubusercontent.com/100768144/170858758-2a0243c5-5efe-429f-b2a5-492a5542f116.png">
+
+
+
+
+
 
